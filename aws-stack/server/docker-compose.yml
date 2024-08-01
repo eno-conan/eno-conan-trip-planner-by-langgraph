@@ -1,0 +1,10 @@
+services:
+  trip-pdf-creater:
+    build: .
+    volumes:
+      - ./app/:/app/
+      - /var/run/docker.sock:/var/run/docker.sock
+    env_file:
+      - .env
+    ports:
+      - 8000:8000

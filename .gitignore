@@ -1,0 +1,15 @@
+# .gitignore
+__pycache__/
+
+.env
+
+outputs/
+storage_context/
+chroma_db/
+
+# vitual env
+trip_ubuntu/
+trip_win/
+
+rakuten_web_service.txt
+trip-pdf-sa.json
