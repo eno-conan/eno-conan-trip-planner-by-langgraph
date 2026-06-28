@@ -6,12 +6,15 @@ RUN apt-get update && apt-get install -y \
     gcc \
     build-essential
 
-COPY ./app /app
-COPY ./requirements.txt /app
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
-RUN pip install --no-cache-dir -r requirements.txt
+COPY pyproject.toml uv.lock ./
+RUN UV_SYSTEM_PYTHON=1 uv sync --frozen --no-dev
+
+COPY ./app /app
+
 RUN apt-get install -y curl gnupg && \
-    curl -fsSL https://playwright.dev/python/docs/installation-script/ | python - 
+    curl -fsSL https://playwright.dev/python/docs/installation-script/ | python -
 # && \
 # playwright install --with-deps chromium
 

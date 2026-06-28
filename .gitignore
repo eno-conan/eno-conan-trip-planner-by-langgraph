@@ -13,3 +13,6 @@ trip_win/
 
 rakuten_web_service.txt
 trip-pdf-sa.json
+
+# plans
+/plans/**

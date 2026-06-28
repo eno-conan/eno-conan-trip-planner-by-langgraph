@@ -1,0 +1,14 @@
+[project]
+name = "aws-stack"
+version = "0.1.0"
+description = "AWS CDK infrastructure for Conan trip planner"
+requires-python = ">=3.9"
+dependencies = [
+    "aws-cdk-lib==2.146.0",
+    "constructs>=10.0.0,<11.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==6.2.5",
+]

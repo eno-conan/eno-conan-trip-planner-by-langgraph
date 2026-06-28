@@ -8,6 +8,8 @@
       "README.md",
       "cdk*.json",
       "requirements*.txt",
+      "pyproject.toml",
+      "uv.lock",
       "source.bat",
       "**/__init__.py",
       "**/__pycache__",
